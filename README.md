@@ -1,4 +1,8 @@
-# InterviewFrontEndTask
+# Visualize location data
+
+1. Upload CSV file with location data
+2. View the points on the map
+3. Visualize data with help of charts
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
