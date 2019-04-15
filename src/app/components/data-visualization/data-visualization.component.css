@@ -1,0 +1,110 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 52px;
+    bottom: 0;
+    width: 100%;
+}
+
+.map-home {
+    position: absolute;
+    top: 52px;
+    bottom: 0;
+    width: 100%;
+    background-image: url('HomeScreenMap.png');
+    
+    /* Add the blur effect */
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.vis{
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    width: 100%;
+}
+
+.ct-btn-scroll {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
+    background-color: black;
+  }
+
+  @keyframes bouncing {
+    0% {bottom: 15px;}
+    50% {bottom: 10px;}
+    100% {bottom: 15px;}
+}
+
+.arrow {
+    animation: bouncing 2s infinite ease-in-out;
+}
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+.legend {
+    background-color: #fff;
+    border-radius: 3px;
+    bottom: 30px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+     
+.legend h4 {
+    margin: 0 0 10px;
+}
+     
+.legend div span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+}
+
+.loader{
+    position: absolute;
+    top:48%;
+    left: 48%;
+    z-index: 999;
+}

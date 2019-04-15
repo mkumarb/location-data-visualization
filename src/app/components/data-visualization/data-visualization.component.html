@@ -1,0 +1,54 @@
+<nav class="navbar navbar-light bg-light justify-content-between navbar-fixed-top" >
+    <div class="navbar-header">
+      <h1 class="navbar-brand">Locale Front End Task</h1>
+    </div>
+    
+    <form #uploadForm="ngForm" (ngSubmit)="uploadFile()" class="form-inline">
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" [disabled]="!uploadForm.valid" type="Submit">Visualize</button>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="csvFile" name="csvFile" ngModel 
+            (change)="onFileSelected($event)" (click)="changeUploadStatus()" required/>
+          <label class="custom-file-label" for="csvFile" style="padding-right: 67px">{{uploadStatus}}</label>
+        </div>
+      </div>
+
+    </form>
+</nav>
+
+<ng-container *ngIf="!visualize">
+  <div class="map-home"></div>
+
+  <div class="bg-text">
+    <h1>Locale Front End Task</h1>
+    <p>Upload CSV file to Visualize data!</p>
+  </div>
+</ng-container>
+
+<div class="map" id='map'></div>
+
+<ng-container *ngIf="visualize">
+
+    <img class="loader" *ngIf="loading" id ="loader" src="assets/ajax-loader.gif" />
+    <div id='state-legend' class='legend'>
+      <h4>Location Type</h4>
+      <div><span style='background-color: rgb(51,67,244)'></span>Pickup</div>
+      <div><span style='background-color: rgb(247,64,67)'></span>Drop</div>
+    </div>
+
+  <div>
+    <a class="ct-btn-scroll arrow" (click)="scrollSmooth(charts)">
+      <img alt="Arrow Down Icon" src="./assets/arrow-down.png">
+    </a>
+  </div>
+
+  <div class="vis" #charts>
+    <charts></charts>
+  </div>
+</ng-container>
+
+
+

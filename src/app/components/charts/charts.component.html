@@ -1,0 +1,65 @@
+<div *ngIf="displayCharts">
+
+  <div class="row chart1">
+    <div class="col-md-12">
+      <h1 class="text-center">Number of trips taken every month</h1>
+      <google-chart
+      [title]="chartProperties[0].title"
+      [type]="chartProperties[0].type"
+      [data]="chartProperties[0].data"
+      [columnNames]="chartProperties[0].columnNames"
+      [options]="chartProperties[0].options"
+      [width]="chartProperties[0].width"
+      [height]="chartProperties[0].height"
+      >
+      </google-chart>
+    </div>
+  </div>
+  
+
+  <div class="row chart2">
+    <div class="col-md-12">
+      <h1 class="text-center">Mode of booking opted each month</h1>
+      <google-chart
+      [title]="chartProperties[1].title"
+      [type]="chartProperties[1].type"
+      [data]="chartProperties[1].data"
+      [columnNames]="chartProperties[1].columnNames"
+      [options]="chartProperties[1].options"
+      [width]="chartProperties[1].width"
+      [height]="chartProperties[1].height"
+      >
+      </google-chart>
+    </div>
+  </div>
+
+  <div class="row chart34">
+    <div class="col-md-6">
+      <h1 class="text-center">Type of package preferred</h1>
+      <google-chart
+        [title]="chartProperties[2].title"
+        [type]="chartProperties[2].type"
+        [data]="chartProperties[2].data"
+        [columnNames]="chartProperties[2].columnNames"
+        [options]="chartProperties[2].options"
+        [width]="chartProperties[2].width"
+        [height]="chartProperties[2].height"
+      >
+      </google-chart>
+    </div>
+
+    <div class="col-md-6">
+      <h1 class="text-center">Type of travel preferred</h1>
+      <google-chart
+        [title]="chartProperties[3].title"
+        [type]="chartProperties[3].type"
+        [data]="chartProperties[3].data"
+        [columnNames]="chartProperties[3].columnNames"
+        [options]="chartProperties[3].options"
+        [width]="chartProperties[3].width"
+        [height]="chartProperties[3].height"
+      >
+      </google-chart>
+    </div>
+  </div>
+</div>
